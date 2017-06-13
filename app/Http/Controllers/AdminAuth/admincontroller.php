@@ -23,10 +23,10 @@ class admincontroller extends Controller
  
 public function Site_details()
     {
-      $user=Site_details::where('id',Auth::user()->id)->get();
 
-    
-         return  view('admin.details',compact('user')); 
+      $user=Site_details::where('id',Auth::user()->id)->get();
+      return  view('admin.details',compact('user')); 
+
     }
      
     public function Update_details(Request $request)
@@ -63,21 +63,7 @@ public function Ad()
 	$user=Site_details::all();
 	return view('admin.ad',compact('user'));
 }
-/*public function Add_url()
-{
-	$user=Add_url::where('id',Auth::user()->id)->get();
-	return view('admin.add_url',compact('user'));
-}*/
-     /*public function Save_url(Request $request)
-    {    
-      
-            $user =Add_url::find($request->id);
-            $user->title=$request->title;
-            $user->url=$request->url;
-            //dd($user);
-            $user->save();
-             return back()->with(['message'=>"successfully updated"]); 
-    }*/
+
     
 public function Add_url(Request $request)
     {

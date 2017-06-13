@@ -19,7 +19,3 @@ Route::get('/ad', 'AdminAuth\admincontroller@Ad')
 ->name('ad');
 Route::post('/add_url', 'AdminAuth\admincontroller@Add_url')
 ->name('add_url');
-Route::post('/save_url', 'AdminAuth\admincontroller@Save_url')
-->name('Save_url');
-
-Route::get('/feed', 'AdminAuth\admincontroller@Feed')->name('feed');
